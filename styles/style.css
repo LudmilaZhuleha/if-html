@@ -4,11 +4,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #383838;
-    margin: 0;
+    margin: 0 auto;
 }
 .offer-container {
     max-width: 1440px;
-    height: 569px;
+    min-height: 569px;
     background-color: #ffff;
     padding: 120px 104px 122px;
 }
@@ -25,11 +25,12 @@ body {
     background-color: #F5BD41;
     margin: 0 auto 80px;
 }
+
 .block {
     display: inline-block;
-    float: left;
+    overflow: auto;
     width: 23%;
-    height: 176px;
+    min-height: 176px;
     margin-right: 16px;
 }
 .block:last-child {
@@ -40,6 +41,7 @@ body {
     height: 100px;
     display: block;
     margin: 0 auto;
+    object-fit: contain;
 }
 .block-info {
     font-weight: 400;
