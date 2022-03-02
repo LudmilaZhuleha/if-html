@@ -7,6 +7,7 @@ body {
     margin: 0 auto;
 }
 .offer-container {
+    margin: auto;
     max-width: 1440px;
     min-height: 569px;
     background-color: #ffff;
@@ -28,7 +29,6 @@ body {
 
 .block {
     display: inline-block;
-    overflow: auto;
     width: 23%;
     min-height: 176px;
     margin-right: 16px;
