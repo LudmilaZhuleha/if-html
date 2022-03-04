@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #383838;
+    margin: 0 auto;
+}
+.offer-container {
+    margin: auto;
+    max-width: 1440px;
+    min-height: 569px;
+    background-color: #ffff;
+    padding: 120px 104px 122px;
+}
+.offer-title {
+    margin-bottom: 20px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+}
+.offer-title-line {
+    width: 100px;
+    height: 4px;
+    background-color: #F5BD41;
+    margin: 0 auto 80px;
+}
+
+.block {
+    display: inline-block;
+    width: 23%;
+    min-height: 176px;
+    margin-right: 16px;
+}
+.block:last-child {
+    margin-right: 0;
+}
+.img-container {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+.block-info {
+    font-weight: 400;
+    font-size: 24px;
+    margin: 48px 0 0 0;
+    text-align: center;
+}
+
+
