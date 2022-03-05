@@ -1,11 +1,18 @@
+@import url(font.css);
+
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #383838;
     margin: 0 auto;
 }
+
+/* styles for What do we offer section */
 .offer-container {
     margin: auto;
     max-width: 1440px;
@@ -13,6 +20,7 @@ body {
     background-color: #ffff;
     padding: 120px 104px 122px;
 }
+
 .offer-title {
     margin-bottom: 20px;
     margin-top: 0;
@@ -20,6 +28,7 @@ body {
     font-weight: 500;
     font-size: 40px;
 }
+
 .offer-title-line {
     width: 100px;
     height: 4px;
@@ -33,9 +42,11 @@ body {
     min-height: 176px;
     margin-right: 16px;
 }
+
 .block:last-child {
     margin-right: 0;
 }
+
 .img-container {
     width: 100px;
     height: 100px;
@@ -43,6 +54,7 @@ body {
     margin: 0 auto;
     object-fit: contain;
 }
+
 .block-info {
     font-weight: 400;
     font-size: 24px;
@@ -50,4 +62,37 @@ body {
     text-align: center;
 }
 
+/* styles for Footer section */
+.footer {
+    max-width: 1440px;
+    min-height: 630px;
+    background-color: #10367C;
+    padding: 120px 104px;
+    color: #ffffff;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-list {
+    list-style: none;
+    width: 33.3%;
+}
+
+.footer-item {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 24px;
+}
+
+.footer-list-title {
+    font-weight: 500;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    margin-top: 40px;
+}
 
