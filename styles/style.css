@@ -96,3 +96,144 @@ body {
     margin-top: 40px;
 }
 
+/* Styles for main section*/
+
+.main {
+    max-width: 1440px;
+    min-height: 100vh;
+    padding: 51px 104px 120px;
+    margin: 0 auto;
+    background: url(../img/project_images/mainpage-image.png) no-repeat center center;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-header-logo {
+    width: 205px;
+    height: 40px;
+    display: block;
+    object-fit: contain;
+}
+
+.main-header-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+
+.main-header-items {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 400;
+    margin-left: 24px;
+}
+.main-header-items:first-child::before {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    top: 100%;
+    left: 8%;
+    background-color: #F5BD41;
+    margin-top: 8px;
+}
+.night-icon {
+    background: url(../img/project_images/night-icon.png) no-repeat center center;
+    width: 30px;
+    height: 30px;
+    margin-left: 48px;
+}
+.account-icon {
+    background: url(../img/project_images/account-icon.png) no-repeat center center;
+    width: 40px;
+    height: 40px;
+    margin-left: 24px;
+}
+.main-title {
+    max-width: 542px;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 59px;
+    color: #FFFFFF;
+    margin-top: 196px;
+    margin-bottom: 100px;
+}
+
+.main-search {
+    margin-bottom: 120px;
+}
+.search-form {
+    display: flex;
+    align-items: flex-end;
+}
+.search-input {
+    border: 3px solid #F3F3F4;
+}
+.label-search {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.search-input[placeholder] {
+    padding-left: 24px;
+    padding-top: 21px;
+    padding-bottom: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 24px;
+}
+.input-place{
+    min-width: 371px;
+    border-radius: 8px 0 0 8px;
+
+}
+.input-date{
+    min-width: 259px;
+    padding-right: 24px;
+    border: 3px solid #F5BD41;
+    border-radius: 8px;
+}
+.input-conditions {
+    min-width: 314px;
+    padding-right: 24px;
+}
+.button {
+    max-width: 192px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.button-search {
+    color: #ffffff;
+    background-color: #3077C6;
+    padding: 19px 57px;
+    border: 3px solid #3077C6;
+    border-radius: 8px;
+}
+
+.main-applications {
+    display: flex;
+    justify-content: center;
+}
+
+.main-applications-item {
+    max-width: 135px;
+    max-height: 40px;
+    margin-right: 17px;
+    list-style: none;
+}
+
+.main-applications-link {
+}
+
+.main-applications-icon {
+
+}
+
