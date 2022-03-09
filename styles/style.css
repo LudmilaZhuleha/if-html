@@ -97,9 +97,8 @@ body {
 }
 
 /* Styles for main section*/
-
-.main {
-    max-width: 1440px;
+.main-container {
+    min-width: 1440px;
     min-height: 100vh;
     padding: 51px 104px 120px;
     margin: 0 auto;
@@ -132,6 +131,7 @@ body {
     font-weight: 400;
     margin-left: 24px;
 }
+
 .main-header-items:first-child::before {
     content: "";
     position: absolute;
@@ -140,40 +140,50 @@ body {
     top: 100%;
     left: 8%;
     background-color: #F5BD41;
-    margin-top: 8px;
+    margin-top: 4px;
 }
+
 .night-icon {
     background: url(../img/project_images/night-icon.png) no-repeat center center;
     width: 30px;
     height: 30px;
     margin-left: 48px;
 }
+
 .account-icon {
     background: url(../img/project_images/account-icon.png) no-repeat center center;
     width: 40px;
     height: 40px;
     margin-left: 24px;
 }
+
 .main-title {
     max-width: 542px;
     font-size: 50px;
     font-weight: 500;
     line-height: 59px;
     color: #FFFFFF;
-    margin-top: 196px;
+    margin-top: 202px;
     margin-bottom: 100px;
 }
 
 .main-search {
     margin-bottom: 120px;
 }
+
 .search-form {
     display: flex;
     align-items: flex-end;
 }
+
 .search-input {
     border: 3px solid #F3F3F4;
 }
+
+.label {
+    padding-left: 24px;
+}
+
 .label-search {
     color: #FFFFFF;
     font-size: 18px;
@@ -182,35 +192,36 @@ body {
 }
 
 .search-input[placeholder] {
-    padding-left: 24px;
-    padding-top: 21px;
-    padding-bottom: 22px;
+    padding: 21px 24px 22px;
     font-size: 18px;
     font-weight: 400;
     margin-top: 24px;
 }
-.input-place{
-    min-width: 371px;
-    border-radius: 8px 0 0 8px;
 
+.input-place {
+    min-width: 458px;
+    border-radius: 8px 0 0 8px;
 }
-.input-date{
-    min-width: 259px;
+
+.input-date {
+    min-width: 256px;
     padding-right: 24px;
     border: 3px solid #F5BD41;
     border-radius: 8px;
 }
+
 .input-conditions {
     min-width: 314px;
     padding-right: 24px;
 }
+
 .button {
     max-width: 192px;
     font-size: 24px;
     font-weight: 500;
 }
 
-.button-search {
+.button-search-blue {
     color: #ffffff;
     background-color: #3077C6;
     padding: 19px 57px;
@@ -223,17 +234,15 @@ body {
     justify-content: center;
 }
 
-.main-applications-item {
+.main-applications-google {
     max-width: 135px;
     max-height: 40px;
     margin-right: 17px;
     list-style: none;
 }
 
-.main-applications-link {
+.main-applications-apple {
+    max-width: 118px;
+    max-height: 38px;
+    list-style: none;
 }
-
-.main-applications-icon {
-
-}
-
