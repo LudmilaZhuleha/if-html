@@ -65,6 +65,73 @@ body {
     margin: 3rem 0 0 0;
     text-align: center;
 }
+@media screen and (max-width: 1024px) {
+    .offer-container {
+        max-width: 1024px;
+        padding: 5.5rem 6.5rem 5.625rem;
+    }
+    .block {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+    .block-info {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .offer-blocks-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 2rem;
+        column-gap: 2rem;
+    }
+    .offer-container {
+        max-width: 768px;
+        padding: 4.5rem 5.5rem 4.625rem;
+    }
+    .offer-title {
+        font-size: 2rem;
+    }
+    .img-container {
+        width: 6.25rem;
+        height: 6.25rem;
+    }
+    .block {
+        margin: 0;
+    }
+    .block-info {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+    .offer-title-line {
+        margin: 0 auto 3rem;
+    }
+}
+@media screen and (max-width: 360px) {
+    .offer-container {
+        width: 100%;
+        padding: 1.5rem 4.5625rem 2.5rem;
+    }
+    .offer-title {
+        font-size: 1.75rem;
+        margin-bottom: 2.125rem;
+    }
+    .offer-blocks-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 2rem;
+    }
+    .block-info {
+        font-size: 0.9375rem;
+        margin-top: 1.5rem;
+    }
+    .offer-title-line {
+        display: none;
+    }
+}
 
 /* styles for Footer section */
 .footer {
@@ -74,7 +141,13 @@ body {
     padding: 7.5rem 6.5rem;
     color: #ffffff;
 }
-
+.footer-logo {
+    display: none;
+    width: 6.125rem;
+    height: 1.1875rem;
+    background: url(../img/project_images/logo-icon-white.png) no-repeat center / contain;
+    margin: 0 auto 2.5rem;
+}
 .footer-container {
     display: flex;
 }
@@ -99,16 +172,67 @@ body {
     font-size: 0.875rem;
     margin-top: 2.5rem;
 }
+@media (max-width: 360px) {
+    .footer {
+        max-width: 22.5rem;
+        padding: 2.5rem 3.5rem;
+    }
+    .footer-container {
+        text-align: center;
+        justify-content: space-between;
 
+    }
+    .footer-logo {
+        display: flex;
+    }
+    .footer-list {
+        flex: 1 1 auto;
+    }
+    .footer-list:not(:last-child) {
+        margin-right: 0.75rem;
+    }
+    .footer-item:not(:first-child) {
+        display: none;
+    }
+    .footer-item:first-child {
+        font-size: 0.9375rem;
+    }
+    .footer-copyright {
+        font-size: 0.75rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .footer {
+        padding: 3.5rem 4rem;
+        color: #ffffff;
+    }
+    .footer-container {
+        display: flex;
+    }
+    .footer-list {
+        list-style: none;
+        flex-basis: 33.3%;
+    }
+
+    .footer-item {
+        font-weight: 400;
+        font-size: 0.85rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    .footer-list:not(:first-child) {
+        margin-left: 1rem;
+    }
+}
 /* Styles for main section*/
 .main-container {
     max-width: 1440px;
     min-height: 100vh;
     padding: 3.1875rem 6.5rem 7.5rem;
     margin: 0 auto;
-    background: url(../img/project_images/mainpage-image.png) no-repeat center center;
-    background-position: top;
-    background-size: cover;
+    background: url(../img/project_images/mainpage-image.png) no-repeat top / cover;
 }
 
 .header {
@@ -204,7 +328,7 @@ body {
     display: inline-block;
 }
 
-.search-input[placeholder] {
+.search-input {
     padding: 1.3125rem 1.5rem 1.375rem;
     font-size: 1.125rem;
     font-weight: 400;
