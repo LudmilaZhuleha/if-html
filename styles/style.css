@@ -12,6 +12,17 @@ body {
     margin: 0 auto;
 }
 
+.reset-button {
+    background-color: transparent;
+    border-width: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+    cursor: pointer;
+}
 /* Styles for main section*/
 .main {
     background: url(../img/project_images/mainpage-image.png) no-repeat top / cover;
@@ -42,57 +53,53 @@ body {
     align-items: center;
     list-style: none;
     position: relative;
+    gap: 0 24px;
 }
 
 .header-items {
     color: #FFFFFF;
     font-size: 1.5rem;
     font-weight: 400;
-    margin-left: 1.5rem;
 }
-
+.header-items:nth-child(2) {
+    margin-right: 48px;
+}
 .header-items-link {
     text-decoration: none;
     color: #FFFFFF;
+    position: relative;
 }
-
-.header-items:first-child::before {
+.header-items-link::after {
     content: "";
-    position: absolute;
-    width: 3.125rem;
-    height: 0.25rem;
-    top: 100%;
-    left: 7%;
+    display: block;
+    height: 4px;
+    width: 0;
     background-color: #F5BD41;
-    margin-top: 0.25rem;
+    position: absolute;
+    bottom: -12px;
+    transition-property: width;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
-.header-items:nth-child(2):hover::before {
+
+.header-items-link:hover::after {
     content: "";
-    position: absolute;
-    width: 3.125rem;
-    height: 0.25rem;
-    top: 100%;
-    left: 34%;
+    display: block;
+    height: 4px;
+    width: 100%;
     background-color: #F5BD41;
-    margin-top: 0.25rem;
+    position: absolute;
+    bottom: -12px;
 }
-
-.night-icon {
-    display: block;
-    /*background: url(../img/project_images/night-icon.png) no-repeat center center;*/
-    width: 30px;
-    height: 30px;
-    margin-left: 3rem;
+.header-items-button {
+    color: #FFFFFF;
+    transition-property: color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
-
-.account-icon {
-    display: block;
-    /*background: url(./svg-sprites.svg#account-icon) no-repeat center center;*/
-    width: 40px;
-    height: 40px;
-    margin-left: 1.5rem;
+.header-items-button:hover {
+    color: #F5BD41;
 }
-
 .main-title {
     max-width: 33.875rem;
     font-size: 3.125rem;
@@ -137,7 +144,7 @@ body {
 }
 
 .input-place {
-    min-width: 25.625rem;
+    min-width: 28.2rem;
     border-radius: 8px 0 0 8px;
 }
 
