@@ -13,7 +13,7 @@
 <main>
     <section class="main">
         <div class="main-container">
-            <div class="header row">
+            <div class="main-header">
                 <svg class="header-logo col-3" width="205" height="40">
                     <use xlink:href="#logo"></use>
                 </svg>
@@ -42,13 +42,11 @@
                     </ul>
                 </nav>
             </div>
-            <div class="row">
-                <h1 class="main-title col-7">Discover stays<br>
-                    to live, work or just relax</h1>
-            </div>
+            <h1 class="main-header-title">Discover stays<br>
+                to live, work or just relax</h1>
             <div class="main-search">
                 <form action="/" method="POST" class="search-form">
-                    <label for="destination" class="label-search col-5"><span class="label">Your destination or hotel
+                    <label for="destination" class="label-search"><span class="label">Your destination or hotel
                         name</span><br>
                         <input id="destination" class="col-5 search-input input-place " type="text" name="place"
                                placeholder="New York" list="cities">
@@ -58,31 +56,33 @@
                         </datalist>
                     </label>
 
-                    <label for="date" class="label-search col-2"><span class="label">Check-in - Check-out</span><br>
-                        <input id="date" class="search-input input-date col-2" type="text" name="date"
+                    <label for="date" class="label-search"><span class="label">Check-in - Check-out</span><br>
+                        <input id="date" class="search-input input-date" type="text" name="date"
                                placeholder="Tue 15 Sept—Sat 19 Sept"></label>
 
-                    <label for="conditions" class="label-search col-3"><span class="label"></span><br>
-                        <input id="conditions" class="search-input input-conditions col-3" type="text"
+                    <label for="conditions" class="label-search"><span class="label"></span><br>
+                        <input id="conditions" class="search-input input-conditions" type="text"
                                name="stay-conditions"
                                placeholder="2 Adults—0 Children—1 Room">
                     </label>
-                    <button type="submit" class="button button-search-blue col-2">Search</button>
+                    <button type="submit" class="button-lg button-search-blue">Search</button>
                 </form>
             </div>
             <ul class="main-applications">
                 <li class="main-applications-google">
-                    <a href="#" class="main-applications-link">
-                        <svg class="main-applications-icon">
-                            <use xlink:href="#google-play"></use>
-                        </svg>
+                    <a href="#">
+                        <img src="img/project_images/google-play-badge.png" alt="google-link">
+<!--                        <svg class="main-applications-icon">-->
+<!--                            <use xlink:href="#google-play"></use>-->
+<!--                        </svg>-->
                     </a>
                 </li>
                 <li class="main-applications-apple">
-                    <a href="#" class="main-applications-link">
-                        <svg class="main-applications-icon">
-                            <use xlink:href="#apple-store"></use>
-                        </svg>
+                    <a href="#">
+                        <img src="img/project_images/apple-store-badge.png" alt="apple-link">
+<!--                        <svg class="main-applications-icon">-->
+<!--                            <use xlink:href="#apple-store"></use>-->
+<!--                        </svg>-->
                     </a>
                 </li>
             </ul>
@@ -91,66 +91,58 @@
     <section class="offer-container">
         <h3 class="offer-title">What do we offer</h3>
         <ul class="offer-blocks-wrapper">
-            <li class="block">
-                <svg class="img-container">
+            <li class="offer-block">
+                <svg class="offer-img-container" width="100" height="100">
                     <use xlink:href="#support"></use>
                 </svg>
-                <p class="block-info">Support 24/7</p>
+                <p class="offer-block-info">Support 24/7</p>
             </li>
-            <li class="block">
-                <svg class="img-container">
+            <li class="offer-block">
+                <svg class="offer-img-container" width="100" height="100">
                     <use xlink:href="#communicate"></use>
                 </svg>
-                <p class="block-info">Communicate directly</p>
+                <p class="offer-block-info">Communicate directly</p>
             </li>
-            <li class="block">
-                <svg class="img-container">
+            <li class="offer-block">
+                <svg class="offer-img-container" width="100" height="100">
                     <use xlink:href="#book"></use>
                 </svg>
-                <p class="block-info">Book online</p>
+                <p class="offer-block-info">Book online</p>
             </li>
-            <li class="block">
-                <svg class="img-container">
+            <li class="offer-block">
+                <svg class="offer-img-container" width="100" height="100">
                     <use xlink:href="#reviews"></use>
                 </svg>
-                <p class="block-info">Real guest reviews</p>
+                <p class="offer-block-info">Real guest reviews</p>
             </li>
         </ul>
     </section>
     <section class="homes">
         <div class="homes-container">
-            <div class="row">
-                <div class="col-4">
-                    <h3 class="homes-title">Homes guests love</h3>
-                </div>
+            <h3 class="homes-title">Homes guests love</h3>
+            <div class="homes-cards">
+                <ul class="homes-card">
+                    <li class="homes-image-1"></li>
+                    <li class="homes-name">Hotel Leopold</li>
+                    <li class="homes-location">Saint Petersburg, Russia</li>
+                </ul>
+                <ul class="homes-card">
+                    <li class="homes-image-2"></li>
+                    <li class="homes-name">Apartment Sunshine</li>
+                    <li class="homes-location">Santa  Cruz de Tenerife, Spain</li>
+                </ul>
+                <ul class="homes-card homes-card_3">
+                    <li class="homes-image-3 "></li>
+                    <li class="homes-name">Villa Kunerad</li>
+                    <li class="homes-location">Vysokie Tatry, Slowakia</li>
+                </ul>
+                <ul class="homes-card homes-card_4">
+                    <li class="homes-image-4"></li>
+                    <li class="homes-name">Hostel Friendship</li>
+                    <li class="homes-location">Berlin, Germany</li>
+                </ul>
             </div>
-            <div class="row cards">
-                <div class="col-3 card">
-                    <div class="home-image-1"></div>
-                    <div class="home-name">Hotel Leopold</div>
-                    <div class="home-location">Saint Petersburg, Russia</div>
-                </div>
-                <div class="col-3 card">
-                    <div class="home-image-2"></div>
-                    <div class="home-name">Apartment Sunshine</div>
-                    <div class="home-location">Santa  Cruz de Tenerife, Spain</div>
-                </div>
-                <div class="col-3 card">
-                    <div class="home-image-3"></div>
-                    <div class="home-name">Villa Kunerad</div>
-                    <div class="home-location">Vysokie Tatry, Slowakia</div>
-                </div>
-                <div class="col-3 card">
-                    <div class="home-image-4"></div>
-                    <div class="home-name">Hostel Friendship</div>
-                    <div class="home-location">Berlin, Germany</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-1">
-                    <button type="button" class="home-slider-button"></button>
-                </div>
-            </div>
+            <button type="button" class="homes-slider-button"></button>
         </div>
     </section>
 </main>
