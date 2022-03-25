@@ -13,42 +13,42 @@
 <main>
     <section class="main">
         <div class="main-container">
-            <div class="header">
-                <svg class="header-logo" width="205" height="40">
+            <div class="main-header">
+                <svg class="header-logo col-3" width="205" height="40">
                     <use xlink:href="#logo"></use>
                 </svg>
-                <nav>
+                <nav class="col-9">
                     <ul class="header-list">
                         <li class="header-items">
-                            <span><a href="#" class="header-items-link">Stays</a></span>
+                            <a href="#" class="header-items-link">Stays</a>
                         </li>
                         <li class="header-items">
-                            <span><a href="#" class="header-items-link">Attractions</a></span>
+                            <a href="#" class="header-items-link">Attractions</a>
                         </li>
                         <li class="header-items">
-                            <a href="#">
-                                <svg class="night-icon">
+                            <button type="button" class="header-items-button reset-button">
+                                <svg class="night-icon" width="30" height="30">
                                     <use xlink:href="#night"></use>
                                 </svg>
-                            </a>
+                            </button>
                         </li>
                         <li class="header-items">
-                            <a href="#">
-                                <svg class="account-icon">
+                            <button type="button" class="header-items-button reset-button">
+                                <svg class="account-icon" width="40" height="40">
                                     <use xlink:href="#account"></use>
                                 </svg>
-                            </a>
+                            </button>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <h1 class="main-title">Discover stays<br>
+            <h1 class="main-header-title">Discover stays<br>
                 to live, work or just relax</h1>
             <div class="main-search">
                 <form action="/" method="POST" class="search-form">
                     <label for="destination" class="label-search"><span class="label">Your destination or hotel
                         name</span><br>
-                        <input id="destination" class="search-input input-place" type="text" name="place"
+                        <input id="destination" class="col-5 search-input input-place " type="text" name="place"
                                placeholder="New York" list="cities">
                         <datalist id="cities">
                             <option value="New York" selected>New York</option>
@@ -65,22 +65,24 @@
                                name="stay-conditions"
                                placeholder="2 Adults—0 Children—1 Room">
                     </label>
-                    <button type="submit" class="button button-search-blue">Search</button>
+                    <button type="submit" class="button-lg button-search-blue">Search</button>
                 </form>
             </div>
             <ul class="main-applications">
                 <li class="main-applications-google">
-                    <a href="#" class="main-applications-link">
-                        <svg class="main-applications-icon">
-                            <use xlink:href="#google-play"></use>
-                        </svg>
+                    <a href="#">
+                        <img src="img/project_images/google-play-badge.png" alt="google-link">
+<!--                        <svg class="main-applications-icon">-->
+<!--                            <use xlink:href="#google-play"></use>-->
+<!--                        </svg>-->
                     </a>
                 </li>
                 <li class="main-applications-apple">
-                    <a href="#" class="main-applications-link">
-                        <svg class="main-applications-icon">
-                            <use xlink:href="#apple-store"></use>
-                        </svg>
+                    <a href="#">
+                        <img src="img/project_images/apple-store-badge.png" alt="apple-link">
+<!--                        <svg class="main-applications-icon">-->
+<!--                            <use xlink:href="#apple-store"></use>-->
+<!--                        </svg>-->
                     </a>
                 </li>
             </ul>
@@ -88,35 +90,63 @@
     </section>
     <section class="offer-container">
         <h3 class="offer-title">What do we offer</h3>
-        <div class="offer-title-line"></div>
         <ul class="offer-blocks-wrapper">
-            <li class="block">
-                <svg class="img-container">
+            <li class="offer-block">
+                <svg class="offer-img-container" width="100" height="100">
                     <use xlink:href="#support"></use>
                 </svg>
-                <p class="block-info">Support 24/7</p>
+                <p class="offer-block-info">Support 24/7</p>
             </li>
-            <li class="block">
-                <svg class="img-container">
+            <li class="offer-block">
+                <svg class="offer-img-container" width="100" height="100">
                     <use xlink:href="#communicate"></use>
                 </svg>
-                <p class="block-info">Communicate directly</p>
+                <p class="offer-block-info">Communicate directly</p>
             </li>
-            <li class="block">
-                <svg class="img-container">
+            <li class="offer-block">
+                <svg class="offer-img-container" width="100" height="100">
                     <use xlink:href="#book"></use>
                 </svg>
-                <p class="block-info">Book online</p>
+                <p class="offer-block-info">Book online</p>
             </li>
-            <li class="block">
-                <svg class="img-container">
+            <li class="offer-block">
+                <svg class="offer-img-container" width="100" height="100">
                     <use xlink:href="#reviews"></use>
                 </svg>
-                <p class="block-info">Real guest reviews</p>
+                <p class="offer-block-info">Real guest reviews</p>
             </li>
         </ul>
     </section>
+    <section class="homes">
+        <div class="homes-container">
+            <h3 class="homes-title">Homes guests love</h3>
+            <div class="homes-cards">
+                <div class="homes-card">
+                    <div class="homes-image-1"></div>
+                    <h3 class="homes-image-name">Hotel Leopold</h3>
+                    <p class="homes-image-location">Saint Petersburg, Russia</p>
+                </div>
+                <div class="homes-card">
+                    <div class="homes-image-2"></div>
+                    <h3 class="homes-image-name">Apartment Sunshine</h3>
+                    <p class="homes-image-location">Santa  Cruz de Tenerife, Spain</p>
+                </div>
+                <div class="homes-card card-invisible">
+                    <div class="homes-image-3 "></div>
+                    <h3 class="homes-image-name">Villa Kunerad</h3>
+                    <p class="homes-image-location">Vysokie Tatry, Slowakia</p>
+                </div>
+                <div class="homes-card card-invisible">
+                    <div class="homes-image-4"></div>
+                    <h3 class="homes-image-name">Hostel Friendship</h3>
+                    <p class="homes-image-location">Berlin, Germany</p>
+                </div>
+            </div>
+            <button type="button" class="homes-slider-button"></button>
+        </div>
+    </section>
 </main>
+
 <footer class="footer">
     <div class="footer-wrapper">
         <div class="footer-logo">
@@ -342,12 +372,12 @@
     <symbol id="night" width="30" height="30" viewBox="0 0 30 30">
         <path
             d="M25.6101 10.6101V4.38992H19.3899L15 0L10.6101 4.38992H4.38992V10.6101L0 15L4.38992 19.3899V25.6101H10.6101L15 30L19.3899 25.6101H25.6101V19.3899L30 15L25.6101 10.6101ZM15 22.9576C13.8196 22.9576 12.6923 22.6923 11.6844 22.2281C14.4164 20.9682 16.3263 18.2096 16.3263 15C16.3263 11.7905 14.4164 9.03183 11.6844 7.77188C12.6923 7.30769 13.8196 7.04244 15 7.04244C19.3899 7.04244 22.9576 10.6101 22.9576 15C22.9576 19.3899 19.3899 22.9576 15 22.9576Z"
-            fill="white"/>
+            fill="currentColor"/>
     </symbol>
     <symbol id="account" width="40" height="40" viewBox="0 0 40 40">
         <path
             d="M20 0C8.96 0 0 8.96 0 20C0 31.04 8.96 40 20 40C31.04 40 40 31.04 40 20C40 8.96 31.04 0 20 0ZM20 6C23.32 6 26 8.68 26 12C26 15.32 23.32 18 20 18C16.68 18 14 15.32 14 12C14 8.68 16.68 6 20 6ZM20 34.4C15 34.4 10.58 31.84 8 27.96C8.06 23.98 16 21.8 20 21.8C23.98 21.8 31.94 23.98 32 27.96C29.42 31.84 25 34.4 20 34.4Z"
-            fill="white"/>
+            fill="currentColor"/>
     </symbol>
     <symbol id="support" width="76" height="92" viewBox="0 0 76 92">
         <path

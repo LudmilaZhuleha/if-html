@@ -12,6 +12,18 @@ body {
     margin: 0 auto;
 }
 
+.reset-button {
+    background-color: transparent;
+    border-width: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
 /* Styles for main section*/
 .main {
     background: url(../img/project_images/mainpage-image.png) no-repeat top / cover;
@@ -24,7 +36,7 @@ body {
     margin: 0 auto;
 }
 
-.header {
+.main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -42,48 +54,62 @@ body {
     align-items: center;
     list-style: none;
     position: relative;
+    gap: 0 24px;
 }
 
 .header-items {
     color: #FFFFFF;
     font-size: 1.5rem;
     font-weight: 400;
-    margin-left: 1.5rem;
+}
+
+.header-items:nth-child(2) {
+    margin-right: 48px;
 }
 
 .header-items-link {
     text-decoration: none;
     color: #FFFFFF;
+    position: relative;
+    outline: none;
 }
 
-.header-items:first-child:hover::before {
+.header-items-link::after {
     content: "";
-    position: absolute;
-    width: 3.125rem;
-    height: 0.25rem;
-    top: 100%;
-    left: 8%;
+    display: block;
+    height: 4px;
+    width: 0;
     background-color: #F5BD41;
-    margin-top: 0.25rem;
+    position: absolute;
+    bottom: -12px;
+    transition-property: width;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
 
-.night-icon {
+.header-items-link:hover::after,.header-items-link:focus::after  {
+    content: "";
     display: block;
-    /*background: url(../img/project_images/night-icon.png) no-repeat center center;*/
-    width: 30px;
-    height: 30px;
-    margin-left: 3rem;
+    height: 4px;
+    width: 100%;
+    background-color: #F5BD41;
+    position: absolute;
+    bottom: -12px;
 }
 
-.account-icon {
-    display: block;
-    /*background: url(./svg-sprites.svg#account-icon) no-repeat center center;*/
-    width: 40px;
-    height: 40px;
-    margin-left: 1.5rem;
+.header-items-button {
+    color: #FFFFFF;
+    transition-property: color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
 
-.main-title {
+.header-items-button:hover, .header-items-button:focus {
+    color: #F5BD41;
+    outline: none;
+}
+
+.main-header-title {
     max-width: 33.875rem;
     font-size: 3.125rem;
     font-weight: 500;
@@ -127,7 +153,7 @@ body {
 }
 
 .input-place {
-    min-width: 25.625rem;
+    min-width: 28rem;
     border-radius: 8px 0 0 8px;
 }
 
@@ -143,20 +169,20 @@ body {
 }
 
 .input-conditions {
-    min-width: 19.375rem;
+    min-width: 19rem;
     padding-right: 1.5rem;
 }
 
-.button {
+.button-lg {
     flex-basis: 12rem;
     font-size: 1.5rem;
     font-weight: 500;
+    padding: 1.1875rem 3.5625rem;
 }
 
 .button-search-blue {
     color: #ffffff;
     background-color: #3077C6;
-    padding: 1.1875rem 3.5625rem;
     border: 3px solid #3077C6;
     border-radius: 8px;
 }
@@ -192,7 +218,7 @@ body {
     list-style: none;
 }
 
-/* styles for What do we offer section */
+/* Styles for What do we offer section */
 .offer-container {
     margin: 0 auto;
     max-width: 1440px;
@@ -202,18 +228,23 @@ body {
 }
 
 .offer-title {
-    margin-bottom: 1.25rem;
+    position: relative;
+    margin-bottom: 6.5rem;
     margin-top: 0;
     text-align: center;
     font-weight: 500;
     font-size: 2.5rem;
 }
 
-.offer-title-line {
-    max-width: 6.25rem;
+.offer-title::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    width: 6.25rem;
     height: 0.25rem;
     background-color: #F5BD41;
-    margin: 0 auto 5rem;
+    margin-top: 1.25rem;
 }
 
 .offer-blocks-wrapper {
@@ -222,30 +253,112 @@ body {
     justify-content: space-between;
 }
 
-.block {
+.offer-block {
     height: auto;
     list-style: none;
     margin-right: 1rem;
     flex: 1 1 23%;
 }
 
-.block:last-child {
+.offer-block:last-child {
     margin-right: 0;
 }
 
-.img-container {
-    width: 6.25rem;
-    height: 6.25rem;
+.offer-img-container {
     display: block;
     margin: 0 auto;
     object-fit: contain;
 }
 
-.block-info {
+.offer-block-info {
     font-weight: 400;
     font-size: 1.5rem;
     margin: 3rem 0 0 0;
     text-align: center;
+}
+
+/*Styles for Homes visitors love section*/
+.homes {
+    background-color: #EAF0F9;
+    display: flex;
+    flex-direction: column;
+}
+
+.homes-container {
+    width: min(100%, 1440px);
+    min-height: 51.75rem;
+    margin: 0 auto;
+    padding: 7.5rem 6.5rem;
+    position: relative;
+}
+
+.homes-title {
+    color: #383838;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 6.5625rem;
+    text-align: center;
+}
+
+.homes-cards {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 1rem;
+    justify-content: space-between;
+}
+
+.homes-card {
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: 23%;
+    list-style: none;
+}
+
+.homes-image-1 {
+    background: url(../img/project_images/leopold-img.png) no-repeat center / contain;
+    width: 18.4175rem;
+    height: 18.4175rem;
+}
+
+.homes-image-2 {
+    background: url(../img/project_images/sunshine-img.png) no-repeat center / contain;
+    width: 18.4175rem;
+    height: 18.4175rem;
+}
+
+.homes-image-3 {
+    background: url(../img/project_images/kunerad-img.png) no-repeat center / contain;
+    width: 18.4175rem;
+    height: 18.4175rem;
+}
+
+.homes-image-4 {
+    background: url(../img/project_images/friendship-img.png) no-repeat center / contain;
+    width: 18.4175rem;
+    height: 18.4175rem;
+}
+
+.homes-image-name {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #3077C6;
+    font-size: 1.5rem;
+}
+
+.homes-image-location {
+    color: #BFBFBF;
+    font-size: 1.5rem;
+}
+
+.homes-slider-button {
+    position: absolute;
+    left: calc(100% - 7.5rem);
+    bottom: 47%;
+    background: url(../img/project_images/slider-arrow-next.png) no-repeat center / contain;
+    object-fit: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
 }
 
 /* styles for Footer section */
@@ -452,4 +565,72 @@ body {
     }
 }
 
-
+/*Media queries for Homes visitors love section*/
+@media screen and (max-width: 1439px) {
+    .homes-cards {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    /*.card-invisible {*/
+    /*    display: none;*/
+    /*}*/
+}
+@media screen and (max-width: 1115px) {
+    .homes-container {
+        padding: 4.5rem 3.5rem;
+        min-height: auto;
+    }
+    .homes-title {
+        font-size: 2.1875rem;
+        margin-bottom: 4rem;
+    }
+    .homes-image-1, .homes-image-2, .homes-image-3, .homes-image-4 {
+        width: 15rem;
+        height: 15rem;
+    }
+    .homes-image-name, .homes-image-location {
+        font-size: 1rem;
+    }
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 4.5rem);
+    }
+}
+@media screen and (max-width: 870px) {
+    .homes-image-1, .homes-image-2, .homes-image-3, .homes-image-4 {
+        width: 9.75rem;
+        height: 9.75rem;
+    }
+    .homes-container {
+        padding: 2.5rem 1rem;
+        min-height: auto;
+    }
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 2.5rem);
+    }
+}
+@media screen and (max-width: 560px) {
+    .homes-container {
+        padding: 2.5rem 1rem;
+        min-height: auto;
+    }
+    .homes-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    .homes-image-name, .homes-image-location {
+        font-size: 0.75rem;
+    }
+    .homes-image-name {
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 2.5rem);
+    }
+    /*.card-invisible {*/
+    /*    display: none;*/
+    /*}*/
+}
