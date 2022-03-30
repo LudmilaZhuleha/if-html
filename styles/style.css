@@ -30,7 +30,7 @@ body {
 }
 
 .main-container {
-    max-width: 1440px;
+    width: min(100%, 1440px);
     min-height: 100vh;
     padding: 3.1875rem 6.5rem 7.5rem;
     margin: 0 auto;
@@ -46,7 +46,6 @@ body {
     width: 205px;
     height: 40px;
     display: block;
-    object-fit: contain;
 }
 
 .header-list {
@@ -97,6 +96,16 @@ body {
     bottom: -12px;
 }
 
+.night-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.account-icon {
+    width: 40px;
+    height: 40px;
+}
+
 .header-items-button {
     color: #FFFFFF;
     transition-property: color;
@@ -109,6 +118,15 @@ body {
     outline: none;
 }
 
+.header-items-burger {
+    width: 24px;
+    height: 16px;
+}
+
+.burger-active {
+    display: none;
+}
+
 .main-header-title {
     max-width: 33.875rem;
     font-size: 3.125rem;
@@ -118,82 +136,122 @@ body {
     margin-bottom: 6.25rem;
 }
 
-.main-search {
-    margin-bottom: 7.5rem;
-    position: relative;
-    z-index: 2;
-}
-
-.main-search::before {
-    content: "";
-    position: absolute;
-    width: 90%;
-    background-color: #fff;
+.main-search-container {
+    max-width: 1232px;
+    height: 64px;
+    background-color: #ffffff;
+    border: 3px solid #f3f3f4;
     border-radius: 8px;
-    height: 70px;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
+    margin-bottom: 120px;
 }
 
-.search-form {
+.main-search-form {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    justify-content: flex-start;
+    position: relative;
 }
 
-.label {
-    padding-left: 1.5rem;
-}
-
-.label-search {
-    color: #FFFFFF;
-    font-size: 1.125rem;
-    font-weight: 400;
-    display: inline-block;
-}
-
-.search-input {
-    padding: 1.3125rem 1.5rem 1.375rem;
-    font-size: 1.125rem;
-    font-weight: 400;
-    margin-top: 1.5rem;
-    border: 3px solid #F3F3F4;
+.input-place-wrap {
+    width: 36%;
 }
 
 .input-place {
-    min-width: 28rem;
-    border-radius: 8px 0 0 8px;
+    width: 100%;
 }
 
-.input-place:focus, .input-conditions:focus, .input-date:focus {
-    border: 3px solid #F5BD41;
+input {
+    height: 57px;
+    border: none;
     border-radius: 8px;
-    outline: none;
+    padding-left: 24px;
+    font-size: 18px;
+}
+
+label {
+    position: absolute;
+    color: #383838;
+    font-size: 18px;
+    transition: 0.2s ease all;
+}
+
+input:focus ~ .label-place,
+input:not(:focus):valid ~ .label-place {
+    top: -48px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.label-place, .label-date-1, .label-date-2 {
+    left: 24px;
+    top: 20px;
+}
+
+.input-date-wrap {
+    display: flex;
+    width: 22%;
+    border: 3px solid #f5bd41;
+    border-radius: 8px;
+    margin-top: -3px;
+}
+
+.input-date-wrap-1, .input-date-wrap-2 {
+    width: 50%;
+    position: relative;
 }
 
 .input-date {
-    flex-basis: 16.1875rem;
-    padding-right: 1.5rem;
+    width: 100%;
+}
+
+input:focus ~ .label-date-1,
+input:not(:focus):valid ~ .label-date-1 {
+    top: -48px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+input:focus ~ .label-date-2,
+input:not(:focus):valid ~ .label-date-2 {
+    top: -48px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+input[type="date"] {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    padding-inline-start: 24px;
 }
 
 .input-conditions {
-    min-width: 19rem;
-    padding-right: 1.5rem;
+    width: 27%;
+}
+
+.label-conditions {
+    left: 713px;
+    top: 20px;
 }
 
 .button-lg {
-    flex-basis: 12rem;
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding: 1.1875rem 3.5625rem;
+    background: #3077c6;
+    border-radius: 8px;
+    border: none;
+    margin-block-start: -3px;
+    margin-inline-end: -3px;
+    cursor: pointer;
 }
 
-.button-search-blue {
+.button-lg {
+    width: 16.6%;
+    height: 64px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
     color: #ffffff;
-    background-color: #3077C6;
-    border: 3px solid #3077C6;
-    border-radius: 8px;
 }
 
 .main-applications {
@@ -316,6 +374,7 @@ body {
     margin-bottom: 1.5rem;
     color: #3077C6;
     font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .homes-image-location {
@@ -391,6 +450,7 @@ body {
 .places-card {
     display: flex;
     flex-direction: column;
+    flex-basis: 23%;
 }
 
 .places-card:not(:last-child) {
@@ -407,10 +467,15 @@ body {
     position: relative;
 }
 
+.places-card-image {
+    width: 296px;
+    height: 296px;
+}
+
 .card-overlay {
     position: absolute;
-    width: 18.5rem;
-    height: 18.5rem;
+    width: 296px;
+    height: 296px;
     top: 0;
     left: 0;
     background-color: #383838;
@@ -560,43 +625,207 @@ body {
 }
 
 /*Media queries for Main section*/
-@media screen and (max-width: 1439px) {
-    .main-search::before {
-        width: 0;
+@media screen and (max-width: 1232px) {
+    .main-search-container, input, .button-lg {
+        width: 100%;
     }
 
-    .search-form {
-        row-gap: 20px;
+    .header-items-link {
+        display: none;
     }
 
-    .input-place {
-        min-width: 22rem;
+    .burger-active {
+        width: 24px;
+        height: 28px;
+        display: block;
+        position: relative;
+    }
+
+    .header-items-burger {
+        position: absolute;
+        top: -3px;
+        right: 0;
+    }
+
+    .main-header-title {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 31px;
+    }
+
+    .main-search-container {
+        height: 232px;
+        background: #f5bd41;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 60px;
+        padding: 8px;
+    }
+
+    .main-search-form {
+        display: block;
+        margin-block-start: 0;
+    }
+
+    input {
+        height: 48px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        padding-top: 24px;
+        padding-left: 36px;
+        color: #383838;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .input-place-wrap {
+        width: 100%;
+    }
+
+    .input-place-wrap::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 8px;
+        width: 16px;
+        height: 16px;
+        background: url("../img/project_images/search-icon.png") no-repeat;
+    }
+
+    input:focus ~ .label-place,
+    input:not(:focus):valid ~ .label-place {
+        top: 6px;
+        left: 36px;
+        font-size: 12px;
+        color: #383838;
+        opacity: 1;
+    }
+
+    .label-place,
+    .label-date-1,
+    .label-date-2,
+    .label-conditions {
+        left: 36px;
+        top: 15px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .label-conditions {
+        left: 32px;
+        top: 124px;
+    }
+
+    .input-date-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+    }
+
+    .input-date-wrap-1 {
+        width: 49%;
+    }
+
+    .input-date-wrap-2 {
+        width: 49%;
+    }
+
+    input[type="date"] {
+        align-items: center;
+        display: inline-flex;
+        font-size: 15px;
+        font-weight: 500;
+        padding-inline-start: 8px;
+        border: 0;
+    }
+
+    input:focus ~ .label-date-1,
+    input:not(:focus):valid ~ .label-date-1 {
+        top: 6px;
+        left: 36px;
+        font-size: 12px;
+        color: #383838;
+        opacity: 1;
+    }
+
+    input:focus ~ .label-date-2,
+    input:not(:focus):valid ~ .label-date-2 {
+        top: 6px;
+        left: 36px;
+        font-size: 12px;
+        color: #383838;
+        opacity: 1;
+    }
+
+    input:focus ~ .label-conditions,
+    input:not(:focus):valid ~ .label-conditions {
+        top: 115px;
+        left: 36px;
+        font-size: 12px;
+        color: #383838;
+        opacity: 1;
+    }
+
+    .button-lg {
+        border-radius: 4px;
+        margin-block-start: 0;
+        height: 48px;
+        font-size: 19px;
     }
 
     .input-conditions {
-        border-bottom-right-radius: 8px;
-        border-top-right-radius: 8px;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 1146px) {
-    .search-form {
-        row-gap: 0;
+@media screen and (max-width: 768px) {
+    .header-logo {
+        width: 130px;
+        height: 30px;
     }
 
-    .input-conditions {
-        min-width: 27rem;
-        border-bottom-left-radius: 8px;
-        border-top-left-radius: 8px;
+    .main-container {
+        padding: 2.5rem;
     }
 
-    .input-date {
-        border-bottom-right-radius: 8px;
-        border-top-right-radius: 8px;
+    .main-header-title {
+        margin-top: 50px;
+    }
+
+    .night-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .account-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header-items-burger {
+        top: 4px;
+    }
+
+    .main-search-container {
+        margin-bottom: 32px;
     }
 }
 
-@media screen and (max-width: 838px) {
+@media screen and (max-width: 360px) {
+    .header-logo {
+        width: 130px;
+        height: 30px;
+    }
+
+    .main-container {
+        padding: 12px 16px 40px;
+    }
 }
 
 /*Media queries for Offer and footer section*/
@@ -733,7 +962,7 @@ body {
 
 @media screen and (max-width: 360px) {
     .offer-container {
-        padding: 1.5rem 4.5625rem 2.5rem;
+        padding: 24px 16px;
     }
 
     .offer-title {
@@ -777,7 +1006,7 @@ body {
         margin-bottom: 4rem;
     }
 
-    .homes-image, .homes-image, .homes-image, .homes-image {
+    .homes-image {
         width: 15rem;
         height: 15rem;
     }
@@ -793,7 +1022,7 @@ body {
 }
 
 @media screen and (max-width: 870px) {
-    .homes-image, .homes-image, .homes-image, .homes-image {
+    .homes-image {
         width: 9.75rem;
         height: 9.75rem;
     }
@@ -843,7 +1072,7 @@ body {
 }
 
 /*Media queries for The best destinations*/
-@media screen and (max-width: 1420px) {
+@media screen and (max-width: 1439px) {
     .places-cards {
         flex-wrap: nowrap;
         overflow: hidden;
@@ -894,6 +1123,13 @@ body {
         width: 250px;
         height: 250px;
     }
+
+    .places-button-book {
+        top: 38%;
+        left: 33%;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width: 630px) {
@@ -906,7 +1142,7 @@ body {
     }
 
     .places-button {
-        font-size: 19px;
+        font-size: 16px;
         padding: 5px 15px;
     }
 
@@ -914,20 +1150,20 @@ body {
         font-size: 2rem;
     }
 
-    .places-button {
-        font-size: 1rem;
-    }
-
     .places-card-image, .card-overlay {
         width: 156px;
         height: 156px;
     }
 
+    .places-card-name {
+        font-size: 16px;
+    }
+
     .places-button-book {
         font-size: 12px;
         padding: 0.5rem 0.8rem;
-        top: 31%;
-        left: 23%;
+        top: 34%;
+        left: 27%;
     }
 
     .places-slider-button {
@@ -941,12 +1177,23 @@ body {
         font-size: 1.75rem;
     }
 
+    .places-container {
+        padding: 30px;
+    }
+
     .places-card-name {
         font-size: 12px;
     }
+    .places-button {
+        padding: 5px 10px;
+    }
+    .places-button-book {
+        padding: 0.2rem 0.5rem;
+        left: 26%;
+    }
 
     .places-slider-button {
-        left: calc(100% - 2rem);
+        left: calc(100% - 50px);
     }
 }
 
@@ -955,8 +1202,12 @@ body {
         padding: 2.5rem 1rem;
     }
 
-    .places-button {
-        padding: 5px 10px;
+    .places-title {
+        margin-bottom: 32px;
+    }
+
+    .places-buttons {
+        margin-bottom: 24px;
     }
 }
 
