@@ -78,6 +78,7 @@ body {
     display: block;
     height: 4px;
     width: 0;
+
     background-color: #F5BD41;
     position: absolute;
     bottom: -12px;
@@ -112,6 +113,7 @@ body {
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
 }
+
 
 .header-items-button:hover, .header-items-button:focus {
     color: #F5BD41;
@@ -1307,5 +1309,68 @@ input[type="date"] {
 
     .signup-promo {
         margin-left: 0;
+    }
+
+/*Media queries for Homes visitors love section*/
+@media screen and (max-width: 1439px) {
+    .homes-cards {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 1115px) {
+    .homes-container {
+        padding: 4.5rem 3.5rem;
+        min-height: auto;
+    }
+    .homes-title {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+    .homes-image {
+        width: 15rem;
+        height: 15rem;
+    }
+    .homes-image-name, .homes-image-location {
+        font-size: 1.3rem;
+    }
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 4.5rem);
+    }
+}
+@media screen and (max-width: 870px) {
+    .homes-image-1, .homes-image-2, .homes-image-3, .homes-image-4 {
+        width: 9.75rem;
+        height: 9.75rem;
+    }
+    .homes-container {
+        padding: 2.5rem 1rem;
+        min-height: auto;
+    }
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 2.5rem);
+    }
+}
+@media screen and (max-width: 560px) {
+    .homes-container {
+        padding: 2.5rem 2rem;
+        min-height: auto;
+    }
+    .homes-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+    .homes-image-name, .homes-image-location {
+        font-size: 0.75rem;
+    }
+    .homes-image-name {
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 2.5rem);
     }
 }
