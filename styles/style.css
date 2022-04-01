@@ -30,7 +30,7 @@ body {
 }
 
 .main-container {
-    max-width: 1440px;
+    width: min(100%, 1440px);
     min-height: 100vh;
     padding: 3.1875rem 6.5rem 7.5rem;
     margin: 0 auto;
@@ -46,7 +46,6 @@ body {
     width: 205px;
     height: 40px;
     display: block;
-    object-fit: contain;
 }
 
 .header-list {
@@ -79,6 +78,7 @@ body {
     display: block;
     height: 4px;
     width: 0;
+
     background-color: #F5BD41;
     position: absolute;
     bottom: -12px;
@@ -87,7 +87,7 @@ body {
     transition-timing-function: ease-in-out;
 }
 
-.header-items-link:hover::after,.header-items-link:focus::after  {
+.header-items-link:hover::after, .header-items-link:focus::after {
     content: "";
     display: block;
     height: 4px;
@@ -97,6 +97,16 @@ body {
     bottom: -12px;
 }
 
+.night-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.account-icon {
+    width: 40px;
+    height: 40px;
+}
+
 .header-items-button {
     color: #FFFFFF;
     transition-property: color;
@@ -104,9 +114,19 @@ body {
     transition-timing-function: ease-in-out;
 }
 
+
 .header-items-button:hover, .header-items-button:focus {
     color: #F5BD41;
     outline: none;
+}
+
+.header-items-burger {
+    width: 24px;
+    height: 16px;
+}
+
+.burger-active {
+    display: none;
 }
 
 .main-header-title {
@@ -118,85 +138,122 @@ body {
     margin-bottom: 6.25rem;
 }
 
-.main-search {
-    margin-bottom: 7.5rem;
-    position: relative;
-    z-index: 2;
+.main-search-container {
+    max-width: 1232px;
+    height: 64px;
+    background-color: #ffffff;
+    border: 3px solid #f3f3f4;
+    border-radius: 8px;
+    margin-bottom: 120px;
 }
 
-.search-form {
+.main-search-form {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    justify-content: flex-start;
+    position: relative;
 }
 
-.search-input {
-    border: 3px solid #F3F3F4;
-}
-
-.label {
-    padding-left: 1.5rem;
-}
-
-.label-search {
-    color: #FFFFFF;
-    font-size: 1.125rem;
-    font-weight: 400;
-    display: inline-block;
-}
-
-.search-input {
-    padding: 1.3125rem 1.5rem 1.375rem;
-    font-size: 1.125rem;
-    font-weight: 400;
-    margin-top: 1.5rem;
+.input-place-wrap {
+    width: 36%;
 }
 
 .input-place {
-    min-width: 28rem;
-    border-radius: 8px 0 0 8px;
+    width: 100%;
 }
 
-.input-place:focus, .input-conditions:focus, .input-date:focus {
-    border: 3px solid #F5BD41;
+input {
+    height: 57px;
+    border: none;
     border-radius: 8px;
-    outline: none;
+    padding-left: 24px;
+    font-size: 18px;
+}
+
+label {
+    position: absolute;
+    color: #383838;
+    font-size: 18px;
+    transition: 0.2s ease all;
+}
+
+input:focus ~ .label-place,
+input:not(:focus):valid ~ .label-place {
+    top: -48px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.label-place, .label-date-1, .label-date-2 {
+    left: 24px;
+    top: 20px;
+}
+
+.input-date-wrap {
+    display: flex;
+    width: 22%;
+    border: 3px solid #f5bd41;
+    border-radius: 8px;
+    margin-top: -3px;
+}
+
+.input-date-wrap-1, .input-date-wrap-2 {
+    width: 50%;
+    position: relative;
 }
 
 .input-date {
-    flex-basis: 16.1875rem;
-    padding-right: 1.5rem;
+    width: 100%;
+}
+
+input:focus ~ .label-date-1,
+input:not(:focus):valid ~ .label-date-1 {
+    top: -48px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+input:focus ~ .label-date-2,
+input:not(:focus):valid ~ .label-date-2 {
+    top: -48px;
+    left: 24px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+input[type="date"] {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    padding-inline-start: 24px;
 }
 
 .input-conditions {
-    min-width: 19rem;
-    padding-right: 1.5rem;
+    width: 27%;
+}
+
+.label-conditions {
+    left: 713px;
+    top: 20px;
 }
 
 .button-lg {
-    flex-basis: 12rem;
-    font-size: 1.5rem;
+    background: #3077c6;
+    border-radius: 8px;
+    border: none;
+    margin-block-start: -3px;
+    margin-inline-end: -3px;
+    cursor: pointer;
+}
+
+.button-lg {
+    width: 16.6%;
+    height: 64px;
     font-weight: 500;
-    padding: 1.1875rem 3.5625rem;
-}
-
-.button-search-blue {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
     color: #ffffff;
-    background-color: #3077C6;
-    border: 3px solid #3077C6;
-    border-radius: 8px;
-}
-
-.main-search::before {
-    content: "";
-    position: absolute;
-    width: 90%;
-    background-color: #fff;
-    border-radius: 8px;
-    height: 70px;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
 }
 
 .main-applications {
@@ -221,7 +278,7 @@ body {
 /* Styles for What do we offer section */
 .offer-container {
     margin: 0 auto;
-    max-width: 1440px;
+    width: min(100%, 1440px);
     min-height: auto;
     background-color: #ffff;
     padding: 7.5rem 6.5rem 7.625rem;
@@ -314,35 +371,12 @@ body {
     list-style: none;
 }
 
-.homes-image-1 {
-    background: url(../img/project_images/leopold-img.png) no-repeat center / contain;
-    width: 18.4175rem;
-    height: 18.4175rem;
-}
-
-.homes-image-2 {
-    background: url(../img/project_images/sunshine-img.png) no-repeat center / contain;
-    width: 18.4175rem;
-    height: 18.4175rem;
-}
-
-.homes-image-3 {
-    background: url(../img/project_images/kunerad-img.png) no-repeat center / contain;
-    width: 18.4175rem;
-    height: 18.4175rem;
-}
-
-.homes-image-4 {
-    background: url(../img/project_images/friendship-img.png) no-repeat center / contain;
-    width: 18.4175rem;
-    height: 18.4175rem;
-}
-
 .homes-image-name {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
     color: #3077C6;
     font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .homes-image-location {
@@ -361,6 +395,189 @@ body {
     border: none;
 }
 
+/*Styles for Best destinations*/
+.places {
+    background-color: #fff;
+}
+
+.places-container {
+    width: min(100%, 1440px);
+    min-height: auto;
+    padding: 120px 104px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.places-title {
+    margin-bottom: 6.5rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.places-buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin-bottom: 4.0625rem;
+}
+
+.places-button {
+    flex-basis: auto;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 1.1875rem 3.5625rem;
+}
+
+.button-search-blue {
+    color: #ffffff;
+    background-color: #3077C6;
+    border: 3px solid #3077C6;
+}
+
+.button-search-white {
+    color: #383838;
+    background-color: #F3F3F4;
+    border: 3px solid #F3F3F4;
+}
+
+.places-cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.places-card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 23%;
+}
+
+.places-card:not(:last-child) {
+    margin-right: 16px;
+}
+
+.places-card-name {
+    margin-top: 1.5625rem;
+    color: #3077C6;
+    font-size: 1.5rem;
+}
+
+.card-active {
+    position: relative;
+}
+
+.places-card-image {
+    width: 296px;
+    height: 296px;
+}
+
+.card-overlay {
+    position: absolute;
+    width: 296px;
+    height: 296px;
+    top: 0;
+    left: 0;
+    background-color: #383838;
+    opacity: 0.5;
+}
+
+.places-button-book {
+    position: absolute;
+    color: #3077C6;
+    font-size: 1.125rem;
+    padding: 0.8125rem 1.5rem;
+    border: 1px solid #3077C6;
+    border-radius: 8px;
+    top: 38%;
+    left: 29%;
+}
+
+.places-slider-button {
+    background: url(../img/project_images/places-slider-arrow.png) no-repeat center / contain;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    position: absolute;
+    top: 85%;
+    left: 49%;
+}
+
+/*Styles for Signup*/
+.signup {
+    background-color: #FFFFFF;
+}
+
+.signup-container {
+    width: min(100%, 1440px);
+    min-height: auto;
+    margin: 0 auto;
+    padding: 0 6.5rem;
+    position: relative;
+}
+
+.signup-wrapper {
+    width: 100%;
+    background-color: #EAF0F9;
+    padding-top: 1.5rem;
+    padding-bottom: 52px;
+}
+
+.signup-button-close {
+    display: block;
+    margin: 0 24px 0 auto;
+    width: 26px;
+    height: 26px;
+}
+
+.signup-block {
+    display: flex;
+    align-items: center;
+}
+
+.signup-user-logo {
+    margin-left: 24px;
+    width: 86px;
+}
+
+.signup-logo-install-bg {
+    display: none;
+}
+
+.signup-install-link {
+    display: none;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    color: #3077C6;
+}
+
+.signup-main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.signup-promo {
+    margin-left: 24px;
+    color: #383838;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 21px;
+    margin-top: 1px;
+}
+
+.signup-button {
+    margin-left: 24px;
+    color: #3077C6;
+    font-size: 1.125rem;
+    padding: 0.8125rem 1.5rem;
+    border: 1px solid #3077C6;
+    border-radius: 8px;
+}
+
 /* styles for Footer section */
 .footer {
     background-color: #10367C;
@@ -377,7 +594,6 @@ body {
     display: none;
     width: 6.125rem;
     height: 1.1875rem;
-    background: url(../img/project_images/logo-icon-white.png) no-repeat center / contain;
     margin: 0 auto 2.5rem;
 }
 
@@ -410,25 +626,230 @@ body {
     display: none;
 }
 
-/*Media queries for Offer and footer section*/
-@media screen and (max-width: 1024px) {
-    .offer-container {
-        max-width: 1000px;
-        padding: 5.5rem 6.5rem 5.625rem;
+/*Media queries for Main section*/
+@media screen and (max-width: 1232px) {
+    .main-search-container, input, .button-lg {
+        width: 100%;
     }
 
-    .block {
+    .header-items-link {
+        display: none;
+    }
+
+    .burger-active {
+        width: 24px;
+        height: 28px;
+        display: block;
+        position: relative;
+    }
+
+    .header-items-burger {
+        position: absolute;
+        top: -3px;
+        right: 0;
+    }
+
+    .main-header-title {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 31px;
+    }
+
+    .main-search-container {
+        height: 232px;
+        background: #f5bd41;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 60px;
+        padding: 8px;
+    }
+
+    .main-search-form {
+        display: block;
+        margin-block-start: 0;
+    }
+
+    input {
+        height: 48px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 18px;
+        padding-top: 24px;
+        padding-left: 36px;
+        color: #383838;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    .input-place-wrap {
+        width: 100%;
+    }
+
+    .input-place-wrap::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 8px;
+        width: 16px;
+        height: 16px;
+        background: url("../img/project_images/search-icon.png") no-repeat;
+    }
+
+    input:focus ~ .label-place,
+    input:not(:focus):valid ~ .label-place {
+        top: 6px;
+        left: 36px;
+        font-size: 12px;
+        color: #383838;
+        opacity: 1;
+    }
+
+    .label-place,
+    .label-date-1,
+    .label-date-2,
+    .label-conditions {
+        left: 36px;
+        top: 15px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .label-conditions {
+        left: 32px;
+        top: 124px;
+    }
+
+    .input-date-wrap {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border: none;
+    }
+
+    .input-date-wrap-1 {
+        width: 49%;
+    }
+
+    .input-date-wrap-2 {
+        width: 49%;
+    }
+
+    input[type="date"] {
+        align-items: center;
+        display: inline-flex;
+        font-size: 15px;
+        font-weight: 500;
+        padding-inline-start: 8px;
+        border: 0;
+    }
+
+    input:focus ~ .label-date-1,
+    input:not(:focus):valid ~ .label-date-1 {
+        top: 6px;
+        left: 36px;
+        font-size: 12px;
+        color: #383838;
+        opacity: 1;
+    }
+
+    input:focus ~ .label-date-2,
+    input:not(:focus):valid ~ .label-date-2 {
+        top: 6px;
+        left: 36px;
+        font-size: 12px;
+        color: #383838;
+        opacity: 1;
+    }
+
+    input:focus ~ .label-conditions,
+    input:not(:focus):valid ~ .label-conditions {
+        top: 115px;
+        left: 36px;
+        font-size: 12px;
+        color: #383838;
+        opacity: 1;
+    }
+
+    .button-lg {
+        border-radius: 4px;
+        margin-block-start: 0;
+        height: 48px;
+        font-size: 19px;
+    }
+
+    .input-conditions {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-logo {
+        width: 130px;
+        height: 30px;
+    }
+
+    .main-container {
+        padding: 2.5rem;
+    }
+
+    .main-header-title {
+        margin-top: 50px;
+    }
+
+    .night-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .account-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header-items-burger {
+        top: 4px;
+    }
+
+    .main-search-container {
+        margin-bottom: 32px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header-logo {
+        width: 130px;
+        height: 30px;
+    }
+
+    .main-container {
+        padding: 12px 16px 40px;
+    }
+}
+
+/*Media queries for Offer and footer section*/
+@media screen and (max-width: 1024px) {
+    .footer-wrapper {
+        padding: 4.5rem 4.5rem;
+    }
+
+    .offer-title::after {
+        left: 41%;
+    }
+
+    .offer-block {
         margin-right: 1rem;
         margin-bottom: 1rem;
     }
 
-    .block-info {
+    .offer-block-info {
         font-size: 1.25rem;
         margin: 0;
     }
-}
 
-@media screen and (max-width: 1024px) {
     .footer-item {
         margin-right: 1rem;
     }
@@ -444,30 +865,26 @@ body {
     }
 
     .offer-container {
-        max-width: 768px;
-        padding: 4.5rem 5.5rem 4.625rem;
+        padding: 3rem 2rem 3.625rem;
     }
 
     .offer-title {
         font-size: 2rem;
+        margin-bottom: 4.5rem;
     }
 
-    .img-container {
+    .offer-img-container {
         width: 6.25rem;
         height: 6.25rem;
     }
 
-    .block {
+    .offer-block {
         margin: 0;
     }
 
-    .block-info {
+    .offer-block-info {
         font-size: 1.25rem;
         margin: 0;
-    }
-
-    .offer-title-line {
-        margin: 0 auto 3rem;
     }
 }
 
@@ -500,6 +917,14 @@ body {
 }
 
 @media screen and (max-width: 560px) {
+    .offer-title {
+        font-size: 1.75rem;
+    }
+
+    .offer-title::after {
+        left: 38%;
+    }
+
     .footer-wrapper {
         max-width: 760px;
         padding: 2.5rem 3.5rem;
@@ -539,13 +964,16 @@ body {
 
 @media screen and (max-width: 360px) {
     .offer-container {
-        width: 100%;
-        padding: 1.5rem 4.5625rem 2.5rem;
+        padding: 24px 16px;
     }
 
     .offer-title {
         font-size: 1.75rem;
         margin-bottom: 2.125rem;
+    }
+
+    .offer-title::after {
+        display: none;
     }
 
     .offer-blocks-wrapper {
@@ -555,13 +983,9 @@ body {
         row-gap: 2rem;
     }
 
-    .block-info {
+    .offer-block-info {
         font-size: 0.9375rem;
         margin-top: 1.5rem;
-    }
-
-    .offer-title-line {
-        display: none;
     }
 }
 
@@ -571,9 +995,328 @@ body {
         flex-wrap: nowrap;
         overflow: hidden;
     }
-    /*.card-invisible {*/
-    /*    display: none;*/
-    /*}*/
+}
+
+@media screen and (max-width: 1115px) {
+    .homes-container {
+        padding: 4.5rem 3.5rem;
+        min-height: auto;
+    }
+
+    .homes-title {
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+    }
+
+    .homes-image {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .homes-image-name, .homes-image-location {
+        font-size: 1.3rem;
+    }
+
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 4.5rem);
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .homes-image {
+        width: 9.75rem;
+        height: 9.75rem;
+    }
+
+    .homes-container {
+        padding: 2.5rem 2rem;
+        min-height: auto;
+    }
+
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 2.5rem);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .homes-container {
+        padding: 2.5rem 2rem;
+        min-height: auto;
+    }
+
+    .homes-title {
+        margin-bottom: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .homes-image-name, .homes-image-location {
+        font-size: 0.75rem;
+    }
+
+    .homes-image-name {
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .homes-slider-button {
+        bottom: 44%;
+        left: calc(100% - 2.5rem);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .homes-container {
+        padding: 2.5rem 1rem;
+        min-height: auto;
+    }
+}
+
+/*Media queries for The best destinations*/
+@media screen and (max-width: 1439px) {
+    .places-cards {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
+    .places-buttons {
+        justify-content: center;
+    }
+
+    .places-title {
+        margin-bottom: 5.5rem;
+    }
+
+    .places-slider-button {
+        top: 58%;
+        left: 87%;
+        transform: rotate(-90deg);
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .places-buttons {
+        margin: 0 auto 50px;
+    }
+
+    .places-button {
+        font-size: 1.5rem;
+        font-weight: 500;
+        border-radius: 8px;
+        padding: 0.8rem 1rem;
+    }
+
+    .places-title {
+        font-size: 2.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .places-container {
+        padding: 72px 56px;
+    }
+
+    .places-slider-button {
+        top: 57%;
+        left: 92%;
+    }
+
+    .places-card-image, .card-overlay {
+        width: 250px;
+        height: 250px;
+    }
+
+    .places-button-book {
+        top: 38%;
+        left: 33%;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .places-container {
+        padding: 56px 36px;
+    }
+
+    .places-cards {
+        margin-bottom: 10px;
+    }
+
+    .places-button {
+        font-size: 16px;
+        padding: 5px 15px;
+    }
+
+    .places-title {
+        font-size: 2rem;
+    }
+
+    .places-card-image, .card-overlay {
+        width: 156px;
+        height: 156px;
+    }
+
+    .places-card-name {
+        font-size: 16px;
+    }
+
+    .places-button-book {
+        font-size: 12px;
+        padding: 0.5rem 0.8rem;
+        top: 34%;
+        left: 27%;
+    }
+
+    .places-slider-button {
+        left: 91%;
+        top: 60%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .places-title {
+        font-size: 1.75rem;
+    }
+
+    .places-container {
+        padding: 30px;
+    }
+
+    .places-card-name {
+        font-size: 12px;
+    }
+    .places-button {
+        padding: 5px 10px;
+    }
+    .places-button-book {
+        padding: 0.2rem 0.5rem;
+        left: 26%;
+    }
+
+    .places-slider-button {
+        left: calc(100% - 50px);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .places-container {
+        padding: 2.5rem 1rem;
+    }
+
+    .places-title {
+        margin-bottom: 32px;
+    }
+
+    .places-buttons {
+        margin-bottom: 24px;
+    }
+}
+
+/*Media queries for Signup section*/
+@media screen and (max-width: 970px) {
+    .signup-container {
+        padding: 0 56px;
+    }
+
+    .signup-close-link, .signup-button-close {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .signup-main {
+        width: 50%;
+    }
+
+    .signup-wrapper {
+        padding-bottom: 24px;
+    }
+
+    .signup-promo {
+        font-size: 16px;
+    }
+
+    .signup-button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .signup-container {
+        padding: 0 36px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .signup-container {
+        padding: 0 16px;
+    }
+
+    .signup-wrapper {
+        background-color: #FFFFFF;
+    }
+
+    .signup-logo-install-bg {
+        display: flex;
+        background-color: #3077C6;
+        border-radius: 8px;
+        height: 58px;
+        width: 58px;
+        padding: 23px 2px;
+        margin: 0 auto 0 28px;
+    }
+
+    .signup-logo {
+        display: none;
+    }
+
+    .signup-promo {
+        font-size: 14px;
+        margin-left: 16px;
+        margin-bottom: 0;
+    }
+
+    .signup-button {
+        display: none;
+    }
+
+    .signup-install-link {
+        display: flex;
+        margin-left: 16px;
+    }
+
+    .signup-button-close {
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: 45%;
+        left: 6%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .signup-promo {
+        font-size: 12px;
+    }
+
+    .signup-logo-install-bg {
+        margin-left: 16px;
+    }
+
+    .signup-button-close {
+        left: 6%;
+    }
+
+    .signup-promo {
+        margin-left: 0;
+    }
+
+/*Media queries for Homes visitors love section*/
+@media screen and (max-width: 1439px) {
+    .homes-cards {
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
 }
 @media screen and (max-width: 1115px) {
     .homes-container {
@@ -581,15 +1324,15 @@ body {
         min-height: auto;
     }
     .homes-title {
-        font-size: 2.1875rem;
+        font-size: 2.5rem;
         margin-bottom: 4rem;
     }
-    .homes-image-1, .homes-image-2, .homes-image-3, .homes-image-4 {
+    .homes-image {
         width: 15rem;
         height: 15rem;
     }
     .homes-image-name, .homes-image-location {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     .homes-slider-button {
         bottom: 44%;
@@ -612,25 +1355,26 @@ body {
 }
 @media screen and (max-width: 560px) {
     .homes-container {
-        padding: 2.5rem 1rem;
+        padding: 2.5rem 2rem;
         min-height: auto;
     }
+
     .homes-title {
         font-size: 1.75rem;
         margin-bottom: 2rem;
     }
+
     .homes-image-name, .homes-image-location {
         font-size: 0.75rem;
     }
+
     .homes-image-name {
         margin-top: 0.5rem;
         margin-bottom: 0.25rem;
     }
+
     .homes-slider-button {
         bottom: 44%;
         left: calc(100% - 2.5rem);
     }
-    /*.card-invisible {*/
-    /*    display: none;*/
-    /*}*/
 }
