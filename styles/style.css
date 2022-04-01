@@ -1358,17 +1358,21 @@ input[type="date"] {
         padding: 2.5rem 2rem;
         min-height: auto;
     }
+
     .homes-title {
         font-size: 1.75rem;
         margin-bottom: 2rem;
     }
+
     .homes-image-name, .homes-image-location {
         font-size: 0.75rem;
     }
+
     .homes-image-name {
         margin-top: 0.5rem;
         margin-bottom: 0.25rem;
     }
+
     .homes-slider-button {
         bottom: 44%;
         left: calc(100% - 2.5rem);
