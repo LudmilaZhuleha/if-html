@@ -78,7 +78,6 @@ body {
     display: block;
     height: 4px;
     width: 0;
-
     background-color: #F5BD41;
     position: absolute;
     bottom: -12px;
@@ -113,7 +112,6 @@ body {
     transition-duration: 300ms;
     transition-timing-function: ease-in-out;
 }
-
 
 .header-items-button:hover, .header-items-button:focus {
     color: #F5BD41;
@@ -576,6 +574,158 @@ input[type="date"] {
     padding: 0.8125rem 1.5rem;
     border: 1px solid #3077C6;
     border-radius: 8px;
+}
+
+/* styles for Guests reviews section */
+.reviews {
+    background-color: #fff;
+}
+
+.reviews-container {
+    width: min(100%, 1440px);
+    height: auto;
+    padding: 120px 104px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.reviews-title {
+    font-size: 40px;
+    font-weight: 500;
+    color: #383838;
+    margin-bottom: 104px;
+    text-align: center;
+}
+
+.reviews-cards-list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+}
+
+.reviews-cards-item {
+    flex-basis: 32%;
+    display: flex;
+}
+
+.reviews-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.reviews-card-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.reviews-image_priceinfo {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #383838;
+    opacity: 0.7;
+    color: #FFFFFF;
+    padding: 16px 24px 11px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.font-regular {
+    font-weight: 400;
+}
+
+.reviews-card-description {
+    background-color: #EAF0F9;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(2, auto);
+    padding: 24px 24px 31px;
+}
+
+.reviews-card_title {
+    color: #3077C6;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.reviews-card_place {
+    color: #3077C6;
+    font-size: 18px;
+}
+
+.reviews-card_rating {
+    width: 48px;
+    height: 32px;
+    background-color: #10367C;
+    border-radius: 8px;
+    color: #FFFFFF;
+    padding: 6px 11px;
+    margin: 0 0 0 auto;
+}
+
+.reviews-card_ratinginfo {
+    color: #BFBFBF;
+    font-size: 14px;
+    padding-top: 4px;
+    text-align: end;
+}
+
+article {
+    background-color: #EAF0F9;
+    height: 100%;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-foto {
+    margin-left: 24px;
+}
+
+.reviewer-name {
+    margin-left: 21px;
+    color: #383838;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.reviewer-place {
+    width: auto;
+    height: 21px;
+    margin-left: 21px;
+}
+
+.reviewer-comments {
+    color: #383838;
+    font-size: 18px;
+    padding: 24px 24px;
+    line-height: 21.09px;
+}
+
+.reviews-cards-slider {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    left: calc(100% - 141px);
+}
+
+.reviews-dot-nav {
+    width: 56px;
+    height: 8px;
+    display: none;
 }
 
 /* styles for Footer section */
@@ -1186,9 +1336,11 @@ input[type="date"] {
     .places-card-name {
         font-size: 12px;
     }
+
     .places-button {
         padding: 5px 10px;
     }
+
     .places-button-book {
         padding: 0.2rem 0.5rem;
         left: 26%;
@@ -1310,71 +1462,152 @@ input[type="date"] {
     .signup-promo {
         margin-left: 0;
     }
+}
 
-/*Media queries for Homes visitors love section*/
+/*Media queries for Guest reviews section*/
 @media screen and (max-width: 1439px) {
-    .homes-cards {
-        flex-wrap: nowrap;
+    .reviews-cards-list {
+        flex-flow: row nowrap;
         overflow: hidden;
     }
-}
-@media screen and (max-width: 1115px) {
-    .homes-container {
-        padding: 4.5rem 3.5rem;
-        min-height: auto;
+
+    .reviews-card-image {
+        width: 400px;
+        height: 400px;
     }
-    .homes-title {
+}
+
+@media screen and (max-width: 1130px) {
+    .reviews-card-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .reviews-cards-slider {
+        top: 37%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .reviews-container {
+        padding: 72px 56px;
+    }
+
+    .reviews-cards-list {
+        justify-content: space-between;
+    }
+
+    .reviews-cards-item {
+        flex-basis: 23%;
+    }
+
+    .reviews-card-image {
+        width: 280px;
+        height: 280px;
+    }
+
+    .reviews-title {
         font-size: 2.5rem;
-        margin-bottom: 4rem;
+        margin-bottom: 3.5rem;
     }
-    .homes-image {
-        width: 15rem;
-        height: 15rem;
-    }
-    .homes-image-name, .homes-image-location {
-        font-size: 1.3rem;
-    }
-    .homes-slider-button {
-        bottom: 44%;
-        left: calc(100% - 4.5rem);
+
+    .reviews-cards-slider {
+        top: 31%;
+        left: 92%;
     }
 }
-@media screen and (max-width: 870px) {
-    .homes-image-1, .homes-image-2, .homes-image-3, .homes-image-4 {
-        width: 9.75rem;
-        height: 9.75rem;
+
+@media screen and (max-width: 660px) {
+    .reviews-container {
+        padding: 56px 36px;
     }
-    .homes-container {
-        padding: 2.5rem 1rem;
-        min-height: auto;
+
+    .reviews-title {
+        font-size: 2rem;
     }
-    .homes-slider-button {
-        bottom: 44%;
-        left: calc(100% - 2.5rem);
+
+    .reviews-cards-item {
+        flex-basis: 50%;
+    }
+
+    .reviews-card-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .reviewer-comments,
+    .reviewer-name,
+    .reviews-card_title,
+    .reviews-card_place,
+    .reviews-image_priceinfo {
+        font-size: 15px;
+    }
+
+    .reviewer-foto {
+        width: 44px;
+        height: 44px;
     }
 }
+
 @media screen and (max-width: 560px) {
-    .homes-container {
-        padding: 2.5rem 2rem;
-        min-height: auto;
+    .reviews-cards-item {
+        flex-basis: 50%;
     }
 
-    .homes-title {
-        font-size: 1.75rem;
-        margin-bottom: 2rem;
+    .reviews-card-image {
+        width: 230px;
+        height: 230px;
     }
 
-    .homes-image-name, .homes-image-location {
-        font-size: 0.75rem;
+    .reviews-cards-slider {
+        top: 28%;
+        left: 88%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .reviews-title {
+        font-size: 28px;
+        margin-bottom: 32px;
     }
 
-    .homes-image-name {
-        margin-top: 0.5rem;
-        margin-bottom: 0.25rem;
+    .reviews-container {
+        padding: 40px 16px;
+        background-color: #EAF0F9;
     }
 
-    .homes-slider-button {
-        bottom: 44%;
-        left: calc(100% - 2.5rem);
+    .reviews-cards-list {
+        flex-flow: row wrap;
+        overflow: initial;
+    }
+
+    .reviews-cards-item {
+        flex-basis: 100%;
+    }
+
+    .reviews-card-image {
+        width: 325px;
+        height: 325px;
+    }
+
+    .reviews-image_priceinfo {
+        display: none;
+    }
+
+    .reviews-card-description {
+        padding: 12px 0 15px;
+    }
+
+    .reviewer-comments {
+        padding: 24px 0 32px;
+    }
+
+    .reviews-dot-nav {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .reviews-cards-slider {
+        display: none;
     }
 }
