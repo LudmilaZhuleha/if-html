@@ -23,9 +23,13 @@ body {
     padding: 0;
     cursor: pointer;
 }
-
+main {
+    display: flex;
+    flex-direction: column;
+}
 /* Styles for main section*/
 .main {
+    order: 1;
     background: url(../img/project_images/mainpage-image.png) no-repeat top / cover;
 }
 
@@ -275,6 +279,7 @@ input[type="date"] {
 
 /* Styles for What do we offer section */
 .offer-container {
+    order: 2;
     margin: 0 auto;
     width: min(100%, 1440px);
     min-height: auto;
@@ -334,6 +339,7 @@ input[type="date"] {
 
 /*Styles for Homes visitors love section*/
 .homes {
+    order: 3;
     background-color: #EAF0F9;
     display: flex;
     flex-direction: column;
@@ -395,6 +401,7 @@ input[type="date"] {
 
 /*Styles for Best destinations*/
 .places {
+    order: 4;
     background-color: #fff;
 }
 
@@ -505,6 +512,7 @@ input[type="date"] {
 
 /*Styles for Signup*/
 .signup {
+    order: 5;
     background-color: #FFFFFF;
 }
 
@@ -578,6 +586,7 @@ input[type="date"] {
 
 /* styles for Guests reviews section */
 .reviews {
+    order: 6;
     background-color: #fff;
 }
 
@@ -1447,6 +1456,9 @@ article {
 }
 
 @media screen and (max-width: 360px) {
+    .signup {
+        order: 7;
+    }
     .signup-promo {
         font-size: 12px;
     }
