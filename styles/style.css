@@ -36,7 +36,7 @@ main {
 .main-container {
     width: min(100%, 1440px);
     min-height: 100vh;
-    padding: 3.1875rem 6.5rem 7.5rem;
+    padding: 51px 104px 120px;
     margin: 0 auto;
 }
 
@@ -62,7 +62,7 @@ main {
 
 .header-items {
     color: #FFFFFF;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
 }
 
@@ -132,12 +132,12 @@ main {
 }
 
 .main-header-title {
-    max-width: 33.875rem;
-    font-size: 3.125rem;
+    max-width: 542px;
+    font-size: 50px;
     font-weight: 500;
     color: #FFFFFF;
-    margin-top: 12.625rem;
-    margin-bottom: 6.25rem;
+    margin-top: 202px;
+    margin-bottom: 100px;
 }
 
 .main-search-container {
@@ -240,15 +240,6 @@ input[type="date"] {
 }
 
 .button-lg {
-    background: #3077c6;
-    border-radius: 8px;
-    border: none;
-    margin-block-start: -3px;
-    margin-inline-end: -3px;
-    cursor: pointer;
-}
-
-.button-lg {
     width: 16.6%;
     height: 64px;
     font-weight: 500;
@@ -256,6 +247,12 @@ input[type="date"] {
     line-height: 28px;
     text-align: center;
     color: #ffffff;
+    background: #3077c6;
+    border-radius: 8px;
+    border: none;
+    margin-block-start: -3px;
+    margin-inline-end: -3px;
+    cursor: pointer;
 }
 
 .main-applications {
@@ -267,7 +264,7 @@ input[type="date"] {
 .main-applications-google {
     width: 135px;
     height: 40px;
-    margin-right: 1.0625rem;
+    margin-right: 17px;
     list-style: none;
 }
 
@@ -284,16 +281,16 @@ input[type="date"] {
     width: min(100%, 1440px);
     min-height: auto;
     background-color: #ffff;
-    padding: 7.5rem 6.5rem 7.625rem;
+    padding: 120px 104px 122px;
 }
 
 .offer-title {
     position: relative;
-    margin-bottom: 6.5rem;
+    margin-bottom: 104px;
     margin-top: 0;
     text-align: center;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 40px;
 }
 
 .offer-title::after {
@@ -301,10 +298,10 @@ input[type="date"] {
     position: absolute;
     top: 100%;
     left: 45%;
-    width: 6.25rem;
-    height: 0.25rem;
+    width: 100px;
+    height: 4px;
     background-color: #F5BD41;
-    margin-top: 1.25rem;
+    margin-top: 20px;
 }
 
 .offer-blocks-wrapper {
@@ -316,7 +313,7 @@ input[type="date"] {
 .offer-block {
     height: auto;
     list-style: none;
-    margin-right: 1rem;
+    margin-right: 16px;
     flex: 1 1 23%;
 }
 
@@ -332,8 +329,8 @@ input[type="date"] {
 
 .offer-block-info {
     font-weight: 400;
-    font-size: 1.5rem;
-    margin: 3rem 0 0 0;
+    font-size: 24px;
+    margin: 48px 0 0 0;
     text-align: center;
 }
 
@@ -347,24 +344,24 @@ input[type="date"] {
 
 .homes-container {
     width: min(100%, 1440px);
-    min-height: 51.75rem;
+    min-height: 828px;
     margin: 0 auto;
-    padding: 7.5rem 6.5rem;
+    padding: 120px 104px;
     position: relative;
 }
 
 .homes-title {
     color: #383838;
-    font-size: 2.5rem;
+    font-size: 40px;
     font-weight: 500;
-    margin-bottom: 6.5625rem;
+    margin-bottom: 105px;
     text-align: center;
 }
 
 .homes-cards {
     display: flex;
     flex-flow: row wrap;
-    column-gap: 1rem;
+    column-gap: 16px;
     justify-content: space-between;
 }
 
@@ -376,26 +373,26 @@ input[type="date"] {
 }
 
 .homes-image-name {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
+    margin-top: 8px;
+    margin-bottom: 24px;
     color: #3077C6;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 400;
 }
 
 .homes-image-location {
     color: #BFBFBF;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .homes-slider-button {
     position: absolute;
-    left: calc(100% - 7.5rem);
+    left: calc(100% - 120px);
     bottom: 47%;
     background: url(../img/project_images/slider-arrow-next.png) no-repeat center / contain;
     object-fit: contain;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 40px;
+    height: 40px;
     border: none;
 }
 
@@ -414,37 +411,37 @@ input[type="date"] {
 }
 
 .places-title {
-    margin-bottom: 6.5rem;
+    margin-bottom: 104px;
     text-align: center;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 40px;
 }
 
 .places-buttons {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
-    margin-bottom: 4.0625rem;
+    margin-bottom: 65px;
 }
 
 .places-button {
     flex-basis: auto;
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 500;
     border-radius: 8px;
-    padding: 1.1875rem 3.5625rem;
-}
-
-.button-search-blue {
-    color: #ffffff;
-    background-color: #3077C6;
-    border: 3px solid #3077C6;
+    padding: 19px 57px;
+    cursor: pointer;
 }
 
 .button-search-white {
     color: #383838;
     background-color: #F3F3F4;
     border: 3px solid #F3F3F4;
+}
+
+.button-search-white:hover {
+    color: #ffffff;
+    background-color: #3077C6;
 }
 
 .places-cards {
@@ -465,45 +462,60 @@ input[type="date"] {
 }
 
 .places-card-name {
-    margin-top: 1.5625rem;
+    margin-top: 25px;
     color: #3077C6;
-    font-size: 1.5rem;
+    font-size: 24px;
 }
 
 .card-active {
     position: relative;
 }
 
-.places-card-image {
+.places-image-wrap {
     width: 296px;
     height: 296px;
+    overflow: hidden;
+    position: relative;
 }
 
-.card-overlay {
+.places-card-image {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+.places-image-wrap:before {
+    content: " ";
     position: absolute;
-    width: 296px;
-    height: 296px;
     top: 0;
     left: 0;
-    background-color: #383838;
-    opacity: 0.5;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .3);
+    opacity: 0;
 }
 
-.places-button-book {
+.places-image-wrap:after {
+    content: " ";
     position: absolute;
-    color: #3077C6;
-    font-size: 1.125rem;
-    padding: 0.8125rem 1.5rem;
-    border: 1px solid #3077C6;
-    border-radius: 8px;
-    top: 38%;
-    left: 29%;
+    top: 54%;
+    left: 53%;
+    right: 0;
+    bottom: 24%;
+    transform: translate(-50%, -50%);
+    background: url("../img/project_images/button-book.png") no-repeat;
+    opacity: 0;
+}
+
+.places-image-wrap:hover:after,
+.places-image-wrap:hover:before {
+    opacity: 1;
 }
 
 .places-slider-button {
     background: url(../img/project_images/places-slider-arrow.png) no-repeat center / contain;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 40px;
+    height: 40px;
     border: none;
     position: absolute;
     top: 85%;
@@ -520,14 +532,14 @@ input[type="date"] {
     width: min(100%, 1440px);
     min-height: auto;
     margin: 0 auto;
-    padding: 0 6.5rem;
+    padding: 0 104px;
     position: relative;
 }
 
 .signup-wrapper {
     width: 100%;
     background-color: #EAF0F9;
-    padding-top: 1.5rem;
+    padding-top: 24px;
     padding-bottom: 52px;
 }
 
@@ -570,7 +582,7 @@ input[type="date"] {
     margin-left: 24px;
     color: #383838;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 24px;
     margin-bottom: 21px;
     margin-top: 1px;
 }
@@ -578,8 +590,8 @@ input[type="date"] {
 .signup-button {
     margin-left: 24px;
     color: #3077C6;
-    font-size: 1.125rem;
-    padding: 0.8125rem 1.5rem;
+    font-size: 18px;
+    padding: 13px 24px;
     border: 1px solid #3077C6;
     border-radius: 8px;
 }
@@ -744,16 +756,16 @@ article {
 }
 
 .footer-wrapper {
-    padding: 7.5rem 6.5rem;
+    padding: 120px 104px;
     max-width: 1440px;
     margin: 0 auto;
 }
 
 .footer-logo {
     display: none;
-    width: 6.125rem;
-    height: 1.1875rem;
-    margin: 0 auto 2.5rem;
+    width: 98px;
+    height: 19px;
+    margin: 0 auto 40px;
 }
 
 .footer-container {
@@ -767,9 +779,9 @@ article {
 
 .footer-item {
     font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1.4375;
-    margin-bottom: 1.5rem;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 24px;
 }
 
 .footer-list-title {
@@ -777,8 +789,8 @@ article {
 }
 
 .footer-copyright {
-    font-size: 0.875rem;
-    margin-top: 2.5rem;
+    font-size: 14px;
+    margin-top: 40px;
 }
 
 .svg-container {
@@ -786,6 +798,11 @@ article {
 }
 
 /*Media queries for Main section*/
+@media screen and (max-width: 1375px) {
+    .label-conditions {
+        left: 650px;
+    }
+}
 @media screen and (max-width: 1232px) {
     .main-search-container, input, .button-lg {
         width: 100%;
@@ -992,7 +1009,7 @@ article {
 /*Media queries for Offer and footer section*/
 @media screen and (max-width: 1024px) {
     .footer-wrapper {
-        padding: 4.5rem 4.5rem;
+        padding: 72px 72px;
     }
 
     .offer-title::after {
@@ -1000,17 +1017,17 @@ article {
     }
 
     .offer-block {
-        margin-right: 1rem;
-        margin-bottom: 1rem;
+        margin-right: 16px;
+        margin-bottom: 16px;
     }
 
     .offer-block-info {
-        font-size: 1.25rem;
+        font-size: 20px;
         margin: 0;
     }
 
     .footer-item {
-        margin-right: 1rem;
+        margin-right: 16px;
     }
 }
 
@@ -1019,22 +1036,22 @@ article {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        row-gap: 2rem;
-        column-gap: 2rem;
+        row-gap: 32px;
+        column-gap: 32px;
     }
 
     .offer-container {
-        padding: 3rem 2rem 3.625rem;
+        padding: 48px 36px 58px;
     }
 
     .offer-title {
-        font-size: 2rem;
-        margin-bottom: 4.5rem;
+        font-size: 36px;
+        margin-bottom: 72px;
     }
 
     .offer-img-container {
-        width: 6.25rem;
-        height: 6.25rem;
+        width: 100px;
+        height: 100px;
     }
 
     .offer-block {
@@ -1042,7 +1059,7 @@ article {
     }
 
     .offer-block-info {
-        font-size: 1.25rem;
+        font-size: 20px;
         margin: 0;
     }
 }
@@ -1050,7 +1067,7 @@ article {
 @media screen and (max-width: 768px) {
     .footer-wrapper {
         max-width: 768px;
-        padding: 3.5rem 4rem;
+        padding: 56px 64px;
         color: #ffffff;
     }
 
@@ -1065,19 +1082,19 @@ article {
 
     .footer-item {
         font-weight: 400;
-        font-size: 0.85rem;
+        font-size: 13px;
         line-height: 1.2;
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
     }
 
     .footer-list:not(:first-child) {
-        margin-left: 1rem;
+        margin-left: 16px;
     }
 }
 
 @media screen and (max-width: 560px) {
     .offer-title {
-        font-size: 1.75rem;
+        font-size: 28px;
     }
 
     .offer-title::after {
@@ -1086,7 +1103,7 @@ article {
 
     .footer-wrapper {
         max-width: 760px;
-        padding: 2.5rem 3.5rem;
+        padding: 40px 36px;
     }
 
     .footer-container {
@@ -1100,23 +1117,26 @@ article {
 
     .footer-list {
         flex: 1 1 auto;
+        margin-left: 2px;
     }
 
     .footer-list:not(:last-child) {
-        margin-right: 0.75rem;
+        margin-right: 5px;
     }
-
+    .footer-item {
+        margin-right: 5px;
+    }
     .footer-item:not(:first-child) {
         display: none;
     }
 
     .footer-item:first-child {
-        font-size: 0.9375rem;
+        font-size: 15px;
     }
 
     .footer-copyright {
-        font-size: 0.75rem;
-        margin-top: 2rem;
+        font-size: 12px;
+        margin-top: 36px;
         text-align: center;
     }
 }
@@ -1127,8 +1147,8 @@ article {
     }
 
     .offer-title {
-        font-size: 1.75rem;
-        margin-bottom: 2.125rem;
+        font-size: 11px;
+        margin-bottom: 34px;
     }
 
     .offer-title::after {
@@ -1139,12 +1159,12 @@ article {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        row-gap: 2rem;
+        row-gap: 16px;
     }
 
     .offer-block-info {
-        font-size: 0.9375rem;
-        margin-top: 1.5rem;
+        font-size: 15px;
+        margin-top: 24px;
     }
 }
 
@@ -1158,76 +1178,76 @@ article {
 
 @media screen and (max-width: 1115px) {
     .homes-container {
-        padding: 4.5rem 3.5rem;
+        padding: 72px 56px;
         min-height: auto;
     }
 
     .homes-title {
-        font-size: 2.5rem;
-        margin-bottom: 4rem;
+        font-size: 40px;
+        margin-bottom: 64px;
     }
 
     .homes-image {
-        width: 15rem;
-        height: 15rem;
+        width: 240px;
+        height: 240px;
     }
 
     .homes-image-name, .homes-image-location {
-        font-size: 1.3rem;
+        font-size: 20px;
     }
 
     .homes-slider-button {
         bottom: 44%;
-        left: calc(100% - 4.5rem);
+        left: calc(100% - 72px);
     }
 }
 
 @media screen and (max-width: 870px) {
     .homes-image {
-        width: 9.75rem;
-        height: 9.75rem;
+        width: 156px;
+        height: 156px;
     }
 
     .homes-container {
-        padding: 2.5rem 2rem;
+        padding: 40px 36px;
         min-height: auto;
     }
 
     .homes-slider-button {
         bottom: 44%;
-        left: calc(100% - 2.5rem);
+        left: calc(100% - 40px);
     }
 }
 
 @media screen and (max-width: 560px) {
     .homes-container {
-        padding: 2.5rem 2rem;
+        padding: 40px 36px;
         min-height: auto;
     }
 
     .homes-title {
-        margin-bottom: 2rem;
-        font-size: 1.75rem;
+        margin-bottom: 36px;
+        font-size: 28px;
     }
 
     .homes-image-name, .homes-image-location {
-        font-size: 0.75rem;
+        font-size: 12px;
     }
 
     .homes-image-name {
-        margin-top: 0.5rem;
-        margin-bottom: 0.25rem;
+        margin-top: 8px;
+        margin-bottom: 4px;
     }
 
     .homes-slider-button {
         bottom: 44%;
-        left: calc(100% - 2.5rem);
+        left: calc(100% - 40px);
     }
 }
 
 @media screen and (max-width: 360px) {
     .homes-container {
-        padding: 2.5rem 1rem;
+        padding: 40px 16px;
         min-height: auto;
     }
 }
@@ -1244,12 +1264,12 @@ article {
     }
 
     .places-title {
-        margin-bottom: 5.5rem;
+        margin-bottom: 88px;
     }
 
     .places-slider-button {
         top: 58%;
-        left: 87%;
+        left: 91%;
         transform: rotate(-90deg);
     }
 }
@@ -1260,15 +1280,15 @@ article {
     }
 
     .places-button {
-        font-size: 1.5rem;
+        font-size: 24px;
         font-weight: 500;
         border-radius: 8px;
-        padding: 0.8rem 1rem;
+        padding: 12px 16px;
     }
 
     .places-title {
-        font-size: 2.5rem;
-        margin-bottom: 3.5rem;
+        font-size: 40px;
+        margin-bottom: 56px;
     }
 
     .places-container {
@@ -1280,16 +1300,18 @@ article {
         left: 92%;
     }
 
-    .places-card-image, .card-overlay {
+    .places-image-wrap {
         width: 250px;
         height: 250px;
     }
 
-    .places-button-book {
-        top: 38%;
-        left: 33%;
-        padding: 0.8rem 1rem;
-        font-size: 1rem;
+    .places-image-wrap:after {
+        left: 49%;
+    }
+
+    .places-card-image {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -1308,23 +1330,24 @@ article {
     }
 
     .places-title {
-        font-size: 2rem;
+        font-size: 36px;
     }
 
-    .places-card-image, .card-overlay {
+    .places-image-wrap {
         width: 156px;
         height: 156px;
+    }
+    .places-image-wrap:after {
+        left: 56%;
+        background-size: 80%;
+    }
+    .places-card-image {
+        width: 100%;
+        height: auto;
     }
 
     .places-card-name {
         font-size: 16px;
-    }
-
-    .places-button-book {
-        font-size: 12px;
-        padding: 0.5rem 0.8rem;
-        top: 34%;
-        left: 27%;
     }
 
     .places-slider-button {
@@ -1335,7 +1358,7 @@ article {
 
 @media screen and (max-width: 560px) {
     .places-title {
-        font-size: 1.75rem;
+        font-size: 28px;
     }
 
     .places-container {
@@ -1350,11 +1373,6 @@ article {
         padding: 5px 10px;
     }
 
-    .places-button-book {
-        padding: 0.2rem 0.5rem;
-        left: 26%;
-    }
-
     .places-slider-button {
         left: calc(100% - 50px);
     }
@@ -1362,7 +1380,7 @@ article {
 
 @media screen and (max-width: 360px) {
     .places-container {
-        padding: 2.5rem 1rem;
+        padding: 40px 16px;
     }
 
     .places-title {
@@ -1371,6 +1389,10 @@ article {
 
     .places-buttons {
         margin-bottom: 24px;
+    }
+    .places-slider-button {
+        left: calc(100% - 36px);
+        top: 56%;
     }
 }
 
@@ -1381,8 +1403,8 @@ article {
     }
 
     .signup-close-link, .signup-button-close {
-        width: 1rem;
-        height: 1rem;
+        width: 16px;
+        height: 16px;
     }
 
     .signup-main {
@@ -1595,6 +1617,10 @@ article {
 
     .reviews-cards-item {
         flex-basis: 100%;
+    }
+
+    .reviews-cards-item:not(:first-child) {
+        display: none;
     }
 
     .reviews-card-image {
